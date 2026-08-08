@@ -42,7 +42,7 @@ export default function Navbar() {
         aria-label="Main navigation"
         className="container-x flex h-16 items-center justify-between sm:h-20"
       >
-        
+        <a
           href="#home"
           className="text-lg font-extrabold tracking-tight text-slate-900 sm:text-xl"
         >
@@ -51,7 +51,7 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-8 md:flex">
           {NAV_LINKS.map((link) => (
-            
+            <a
               key={link.href}
               href={link.href}
               className="text-sm font-medium text-slate-600 transition hover:text-brand-600"
@@ -82,7 +82,7 @@ export default function Navbar() {
         <div className="border-t border-slate-100 bg-white px-5 pb-6 pt-2 md:hidden">
           <div className="flex flex-col gap-1">
             {NAV_LINKS.map((link) => (
-              
+              <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
@@ -91,7 +91,7 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            
+            <a
               href="#contact"
               onClick={() => setOpen(false)}
               className="btn-primary mt-2 w-full"
