@@ -30,8 +30,6 @@ export default function Contact() {
     const body = encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\nBusiness: ${form.business}\n\nMessage:\n${form.message}`
     );
-    // Frontend-only submission: opens the visitor's email client.
-    // No backend or database stores this data.
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
   };
 
@@ -49,7 +47,7 @@ export default function Contact() {
           </p>
 
           <div className="mt-8 space-y-4">
-            
+            <a
               href={`mailto:${CONTACT_EMAIL}`}
               className="flex items-center gap-3 rounded-xl border border-slate-100 bg-slate-50 p-4 transition hover:border-brand-200"
             >
@@ -58,7 +56,7 @@ export default function Contact() {
                 {CONTACT_EMAIL}
               </span>
             </a>
-            
+            <a
               href={TELEGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -70,7 +68,7 @@ export default function Contact() {
               </span>
               <ExternalLink className="ml-auto text-slate-400" size={16} />
             </a>
-            
+            <a
               href={LINKEDIN_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -82,7 +80,7 @@ export default function Contact() {
               </span>
               <ExternalLink className="ml-auto text-slate-400" size={16} />
             </a>
-            
+            <a
               href={FACEBOOK_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -103,10 +101,7 @@ export default function Contact() {
         >
           <div className="space-y-5">
             <div>
-              <label
-                htmlFor="name"
-                className="mb-1.5 block text-sm font-medium text-slate-700"
-              >
+              <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-slate-700">
                 Name
               </label>
               <input
@@ -120,10 +115,7 @@ export default function Contact() {
               />
             </div>
             <div>
-              <label
-                htmlFor="email"
-                className="mb-1.5 block text-sm font-medium text-slate-700"
-              >
+              <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-slate-700">
                 Email
               </label>
               <input
@@ -137,10 +129,7 @@ export default function Contact() {
               />
             </div>
             <div>
-              <label
-                htmlFor="business"
-                className="mb-1.5 block text-sm font-medium text-slate-700"
-              >
+              <label htmlFor="business" className="mb-1.5 block text-sm font-medium text-slate-700">
                 Business
               </label>
               <input
@@ -153,10 +142,7 @@ export default function Contact() {
               />
             </div>
             <div>
-              <label
-                htmlFor="message"
-                className="mb-1.5 block text-sm font-medium text-slate-700"
-              >
+              <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-slate-700">
                 Message
               </label>
               <textarea
@@ -175,8 +161,7 @@ export default function Contact() {
               <Send size={16} />
             </button>
             <p className="text-center text-xs text-slate-400">
-              This form opens your email app — no data is stored on a
-              server.
+              This form opens your email app — no data is stored on a server.
             </p>
           </div>
         </form>
