@@ -29,7 +29,7 @@ export default function Hero() {
               Work With Me
               <ArrowRight size={18} />
             </a>
-            
+            <a
               href="#work"
               className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10"
             >
